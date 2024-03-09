@@ -54,29 +54,10 @@
                 android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.503"
+                app:layout_constraintHorizontal_bias="0.534"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.769" />
-
-            <Button
-                android:id="@+id/signup"
-                android:layout_width="117dp"
-                android:layout_height="25dp"
-                android:background="@drawable/bluebutton"
-                android:backgroundTint="#455154"
-                android:text="SIGN UP"
-                android:textAppearance="@null"
-                android:textColor="@color/white"
-                android:textColorHighlight="@null"
-                android:textColorLink="@null"
-                android:textSize="16sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.537"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.922" />
+                app:layout_constraintVertical_bias="0.788" />
 
             <TextView
                 android:id="@+id/textView1"
@@ -113,10 +94,26 @@
                 android:textColorHint="@color/blue"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.753"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.842" />
+
+            <Button
+                android:id="@+id/loginForgetPassword"
+                android:layout_width="192dp"
+                android:layout_height="53dp"
+                android:background="@drawable/blue"
+                android:backgroundTint="@color/skin"
+                android:gravity="center"
+                android:hint="Are You new? Sign Up"
+                android:textColorHint="@color/blue"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.497"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.823" />
+                app:layout_constraintVertical_bias="0.936" />
 
             <EditText
                 android:id="@+id/userName"
