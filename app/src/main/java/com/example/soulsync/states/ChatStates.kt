@@ -1,7 +1,6 @@
 package com.example.soulsync.states
 
 
-
 class ChatStates {
     var user: String = ""
     var chatid: String = ""
