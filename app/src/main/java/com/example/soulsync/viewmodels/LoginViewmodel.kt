@@ -1,13 +1,13 @@
-package com.example.soulsync.viewmodels
+package layout
 
 import android.util.Log
 import android.widget.Toast
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.soulsync.database.entity.User
-import com.example.soulsync.events.LoginEvent
-import com.example.soulsync.events.RegistrationEvents
-import com.example.soulsync.states.LoginStates
+import com.example.thesoulsync.database.entity.User
+import com.example.thesoulsync.events.LoginEvent
+import com.example.thesoulsync.events.RegistrationEvents
+import com.example.thesoulsync.states.LoginStates
 
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.coroutines.flow.MutableStateFlow
