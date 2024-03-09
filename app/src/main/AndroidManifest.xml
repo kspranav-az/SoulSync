@@ -12,9 +12,36 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SoulSync"
         tools:targetApi="31">
+
+
+
+        <activity
+            android:name=".ChatBotActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".questionNarie1Activity"
+            android:exported="false" />
+
+        <activity android:name=".UserBanActivity"
+            android:exported="false"/>
+
+        <activity
+            android:name=".verifiedUserActivity"
+            android:exported="false" />
+        <activity
+            android:name=".questionNarie2Activity"
+            android:exported="false" />
+        <activity
+            android:name=".postView"
+            android:exported="false" />
+        <activity
+            android:name=".FeedActivity"
+            android:exported="false" />
+
         <activity
             android:name=".RegisterActivity"
-            android:exported="false" />
+            android:exported="true"/>
         <activity
             android:name=".MainActivity"
             android:exported="true">

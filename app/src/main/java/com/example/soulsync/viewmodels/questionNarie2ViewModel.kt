@@ -1,8 +1,9 @@
 package com.example.soulsync.viewmodels
+
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.thesoulsync.events.Questionnair2Events
-import com.example.thesoulsync.states.Questionnaire2States
+import com.example.soulsync.events.Questionnair2Events
+import com.example.soulsync.states.Questionnaire2States
 import com.google.firebase.database.DatabaseReference
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted

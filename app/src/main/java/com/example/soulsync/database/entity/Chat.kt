@@ -5,8 +5,8 @@ import com.google.firebase.database.IgnoreExtraProperties
 
 @IgnoreExtraProperties
 data class Chat(
-    val uid : String,
-    val chat : String
+    val uid : String ="",
+    val chat : String =""
 ){
     @Exclude
     fun toMap(): Map<String, Any?> {

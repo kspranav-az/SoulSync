@@ -3,10 +3,9 @@ package com.example.soulsync.viewmodels
 import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.thesoulsync.database.WriteData
-import com.example.thesoulsync.events.RegistrationEvents
-import com.example.thesoulsync.states.LoginStates
-import com.example.thesoulsync.states.RegistrationStates
+import com.example.soulsync.database.WriteData
+import com.example.soulsync.events.RegistrationEvents
+import com.example.soulsync.states.RegistrationStates
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -25,8 +24,6 @@ class RegistrationViewmodel(private val auth: FirebaseAuth,private val database:
 
     fun onEvent(event: RegistrationEvents){
         when(event){
-
-
             RegistrationEvents.Register -> {
                 _state.value.email?.let {
                     _state.value.password?.let { it1 ->
@@ -52,6 +49,8 @@ class RegistrationViewmodel(private val auth: FirebaseAuth,private val database:
                                     Log.w(TAG, "createUserWithEmail:failure", task.exception)
 
                                 }
+                            }.addOnFailureListener {
+
                             }
                     }
                 }
