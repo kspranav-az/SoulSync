@@ -13,8 +13,8 @@ class questionNarie1Activity : AppCompatActivity(){
         super.onCreate(savedInstanceState)
         setContentView(R.layout.quetionaire1_login)
         var  btn : Button = findViewById(R.id.myButton)
-//        btn.setOnClickListener {
-//            startActivity(Intent(applicationContext,questionNarie2Activity::class.java))
-//        }
+        btn.setOnClickListener {
+            startActivity(Intent(applicationContext,questionNarie2Activity::class.java))
+        }
     }
 }

@@ -59,6 +59,9 @@ class LoginViewmodel(private val auth: FirebaseAuth) : ViewModel() {
                                     onEvent(LoginEvent.LoginFailed)
 
                                 }
+                            }.addOnFailureListener {
+                                Log.i(TAG, "signInWithEmail:failure : ${it.message}")
+                                onEvent(LoginEvent.LoginFailed)
                             }
                     }
                 }

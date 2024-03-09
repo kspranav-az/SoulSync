@@ -49,6 +49,8 @@ class RegistrationViewmodel(private val auth: FirebaseAuth,private val database:
                                     Log.w(TAG, "createUserWithEmail:failure", task.exception)
 
                                 }
+                            }.addOnFailureListener {
+
                             }
                     }
                 }

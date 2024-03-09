@@ -23,6 +23,7 @@ import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.ktx.Firebase
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
@@ -67,6 +68,8 @@ class MainActivity : AppCompatActivity() {
 
         binding.Login.setOnClickListener {
             loginViewmodel.onEvent(LoginEvent.Login)
+
+
         }
 
         binding.signup.setOnClickListener {
@@ -90,8 +93,6 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
-
-
 
     }
 }
