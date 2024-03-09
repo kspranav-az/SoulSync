@@ -1,6 +1,6 @@
-package com.example.thesoulsync.states
+package com.example.soulsync.states
 
-import com.example.thesoulsync.database.entity.User
+import com.example.soulsync.database.entity.User
 
 
 data class LoginStates(

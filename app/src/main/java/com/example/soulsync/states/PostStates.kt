@@ -1,6 +1,6 @@
-package com.example.thesoulsync.states
+package com.example.soulsync.states
 
-import com.example.thesoulsync.database.entity.Post
+import com.example.soulsync.database.entity.Post
 
 data class PostStates (
     var comment:ArrayList<Post> = ArrayList()

@@ -4,11 +4,11 @@ package com.example.soulsync.viewmodels
 import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.thesoulsync.ChatStates
-import com.example.thesoulsync.database.ReadData
-import com.example.thesoulsync.database.WriteData
-import com.example.thesoulsync.database.entity.Chat
-import com.example.thesoulsync.events.ChatEvents
+import com.example.soulsync.states.ChatStates
+import com.example.soulsync.database.ReadData
+import com.example.soulsync.database.WriteData
+import com.example.soulsync.database.entity.Chat
+import com.example.soulsync.events.ChatEvents
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import kotlinx.coroutines.flow.MutableStateFlow

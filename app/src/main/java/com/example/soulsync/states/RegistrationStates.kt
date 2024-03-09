@@ -1,4 +1,4 @@
-package com.example.thesoulsync.states
+package com.example.soulsync.states
 
 data class RegistrationStates(
     var email : String? = "" ,

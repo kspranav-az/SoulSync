@@ -1,4 +1,4 @@
-package com.example.thesoulsync.states
+package com.example.soulsync.states
 
 data class Questionnaire2States (
     var q1 : String = "",

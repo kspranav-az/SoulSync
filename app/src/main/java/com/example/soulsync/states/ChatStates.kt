@@ -1,6 +1,5 @@
-package com.example.thesoulsync
+package com.example.soulsync.states
 
-import com.example.thesoulsync.events.ChatEvents
 
 
 class ChatStates {

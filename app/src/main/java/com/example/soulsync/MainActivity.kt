@@ -40,34 +40,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         loginViewmodel = LoginViewmodel(auth)
 
-        loginViewmodel.viewModelScope.launch (Dispatchers.Default){
-            withContext(Dispatchers.Default){
 
-                var writeData = WriteData(FirebaseDatabase.getInstance("https://thesoulsync-39d5f-default-rtdb.asia-southeast1.firebasedatabase.app").reference)
-                writeData.writeNewUser("abcdefgh" , "pranav" ,"pranav@gmail.com")
-                writeData.writeNewUser("abcdytre" , "harsh" ,"pranav@gmail.com",true)
-                val postid1 = writeData.writeNewPost("abcdefgh" , "pranav" , "this is title " , "this is body")
-                val postid2 = writeData.writeNewPost("abcdefgh" , "pranav" , "this is title " , "this is body")
-                writeData.writeNewResponse(QResponse("well" , "good" , "very good") , "abcdefgh")
-                val chatid = writeData.createChat(User("abcdefgh","pranav"),"abcdytre")
-                if (chatid != null) {
-                    writeData.writeNewChat(Chat("abcdefgh","hey"),chatid)
-                    writeData.writeNewChat(Chat("abcdytre","hello"),chatid)
-                    writeData.writeNewChat(Chat("abcdefgh","helo"),chatid)
-                }
-
-                if (postid1 != null) {
-                    writeData.writeNewComment("abcdefgh" ,postid1 , "pranav" , "this is comment 1")
-                }
-                if (postid2 != null) {
-                    writeData.writeNewComment("abcdytre" ,postid2 , "harsh" , "this is comment 2")
-                }
-                if (postid1 != null) {
-                    writeData.writeNewComment("abcdefgh" ,postid1 , "pranav" , "this is comment 3")
-                }
-
-            }
-        }
 
 
 
