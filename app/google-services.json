@@ -1,14 +1,13 @@
 {
   "project_info": {
-    "project_number": "934592162821",
-    "firebase_url": "https://thesoulsync-39d5f-default-rtdb.asia-southeast1.firebasedatabase.app",
-    "project_id": "thesoulsync-39d5f",
-    "storage_bucket": "thesoulsync-39d5f.appspot.com"
+    "project_number": "347838675906",
+    "project_id": "soulsync-8c7b0",
+    "storage_bucket": "soulsync-8c7b0.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:934592162821:android:3b86f2228f5756d090c06c",
+        "mobilesdk_app_id": "1:347838675906:android:05b12ea9678e022bb5745b",
         "android_client_info": {
           "package_name": "com.example.soulsync"
         }
@@ -16,26 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyBbKMzYPOFG7M6I5qBdKj57p__NBZI8HkY"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": []
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:934592162821:android:6c0c61cf65bf26cd90c06c",
-        "android_client_info": {
-          "package_name": "com.example.thesoulsync"
-        }
-      },
-      "oauth_client": [],
-      "api_key": [
-        {
-          "current_key": "AIzaSyBbKMzYPOFG7M6I5qBdKj57p__NBZI8HkY"
+          "current_key": "AIzaSyD3AyL8PM_MZoLDOa1jT7vYwexPI8FvR0g"
         }
       ],
       "services": {

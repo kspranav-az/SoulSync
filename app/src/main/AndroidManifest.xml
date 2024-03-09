@@ -22,8 +22,10 @@
         <activity
             android:name=".questionNarie1Activity"
             android:exported="false" />
+
         <activity android:name=".UserBanActivity"
             android:exported="false"/>
+
         <activity
             android:name=".verifiedUserActivity"
             android:exported="false" />

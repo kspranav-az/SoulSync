@@ -45,20 +45,23 @@
         android:background="@drawable/baseline_android_24"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.384"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/feed"
         android:layout_width="43dp"
         android:layout_height="43dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="138dp"
+        android:layout_marginEnd="148dp"
         android:layout_marginBottom="792dp"
         android:background="@drawable/baseline_feed_24"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.036" />
 
     <Button
         android:id="@+id/msg"

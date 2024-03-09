@@ -49,7 +49,7 @@ class ChatBotActivity : AppCompatActivity() {
 
 
             var chatViewmodel: ChatViewModel = ChatViewModel(
-                FirebaseDatabase.getInstance("https://thesoulsync-39d5f-default-rtdb.asia-southeast1.firebasedatabase.app")
+                FirebaseDatabase.getInstance("https://soulsync-8c7b0-default-rtdb.asia-southeast1.firebasedatabase.app/")
                     .reference
             )
 
@@ -76,16 +76,7 @@ class ChatBotActivity : AppCompatActivity() {
             )
 
      */
-            //ignore this is for naviagtion bar
-//            binding.prf.setOnClickListener {
-//                val i = Intent(applicationContext, CalendarActivity::class.java)
-//                i.addFlags(android.content.Intent.FLAG_ACTIVITY_CLEAR_TOP)
-//                i.addFlags(android.content.Intent.FLAG_ACTIVITY_CLEAR_TASK)
-//                i.addFlags(android.content.Intent.FLAG_ACTIVITY_NEW_TASK)
-//                i.putExtra("EXIT", true)
-//                startActivity(i)
-//                finish()
-//            }
+
             binding.bot.setOnClickListener {
                 val i = Intent(applicationContext, ChatBotActivity::class.java)
                 i.addFlags(android.content.Intent.FLAG_ACTIVITY_CLEAR_TOP)

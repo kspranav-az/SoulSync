@@ -7,10 +7,11 @@
     android:background="#D2baa8"
     tools:context=".FeedActivity">
 
+
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
-        android:layout_width="417dp"
-        android:layout_height="80dp"
+        android:layout_width="431dp"
+        android:layout_height="78dp"
         android:background="@color/blue"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
@@ -20,7 +21,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
-
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/Comments"
@@ -39,10 +39,9 @@
         android:background="@drawable/whitbg"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.478"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.133">
+        app:layout_constraintVertical_bias="0.179">
 
         <ImageView
             android:id="@+id/imageView2"
@@ -77,8 +76,10 @@
         android:background="@drawable/baseline_person_24"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.282"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/bot"
@@ -91,30 +92,34 @@
         android:background="@drawable/baseline_android_24"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.435"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/feed"
         android:layout_width="43dp"
         android:layout_height="43dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="138dp"
+        android:layout_marginEnd="144dp"
         android:layout_marginBottom="792dp"
         android:background="@drawable/baseline_feed_24"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/msg"
         android:layout_width="46dp"
         android:layout_height="48dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="54dp"
+        android:layout_marginEnd="56dp"
         android:layout_marginBottom="787dp"
         android:background="@drawable/baseline_message_24"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>

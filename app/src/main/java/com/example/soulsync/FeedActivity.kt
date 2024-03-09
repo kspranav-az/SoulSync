@@ -18,7 +18,7 @@ class FeedActivity : AppCompatActivity() {
 
         val recyclerView : RecyclerView = findViewById<RecyclerView>(R.id.feedRecycler)
         recyclerView.layoutManager = LinearLayoutManager(this)
-        //val adapter = FeedAdapter(FirebaseDatabase.getInstance("https://thesoulsync-39d5f-default-rtdb.asia-southeast1.firebasedatabase.app").reference)
+        //val adapter = FeedAdapter(FirebaseDatabase.getInstance("https://soulsync-8c7b0-default-rtdb.asia-southeast1.firebasedatabase.app/").reference)
         //recyclerView.adapter = adapter
 
 //        binding.prf.setOnClickListener {
