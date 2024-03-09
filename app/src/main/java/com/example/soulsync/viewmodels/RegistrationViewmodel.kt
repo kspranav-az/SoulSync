@@ -3,8 +3,8 @@ package com.example.soulsync.viewmodels
 import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.thesoulsync.database.WriteData
-import com.example.thesoulsync.events.RegistrationEvents
+import com.example.soulsync.database.WriteData
+import com.example.soulsync.events.RegistrationEvents
 import com.example.thesoulsync.states.LoginStates
 import com.example.thesoulsync.states.RegistrationStates
 import com.google.firebase.auth.FirebaseAuth

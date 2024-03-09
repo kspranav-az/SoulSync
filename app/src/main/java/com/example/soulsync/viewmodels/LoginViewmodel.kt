@@ -29,7 +29,7 @@ class LoginViewmodel(private val auth: FirebaseAuth) : ViewModel() {
     fun onEvent(event : LoginEvent){
         when(event){
             LoginEvent.Login -> {
-//                RegistrationViewmodel(auth).onEvent(RegistrationEvents.register(_states.value.email!!,_states.value.password!!))
+                RegistrationViewmodel(auth).onEvent(RegistrationEvents.register(_states.value.email!!,_states.value.password!!))
                 _states.value.email?.let {
                     _states.value.password?.let { it1 ->
                         auth.signInWithEmailAndPassword(it, it1)
