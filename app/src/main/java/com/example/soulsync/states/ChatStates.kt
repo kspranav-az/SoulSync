@@ -7,15 +7,12 @@ class ChatStates {
     var message: String = ""
     var active: Boolean = false
     var connected: Boolean = false
+    var isuser : Boolean = true
 
     constructor(){}
 
-    constructor(message: String?,user: String?){
-        if (message != null) {
-            this.message = message
-        }
-        if (user != null) {
-            this.user = user
-        }
+    constructor(message: String , isuser: Boolean){
+        this.message = message
+        this.isuser = isuser
     }
 }

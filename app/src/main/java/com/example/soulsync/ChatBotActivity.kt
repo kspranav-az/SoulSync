@@ -1,34 +1,26 @@
 package com.example.soulsync
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.text.Editable
-import android.text.TextWatcher
-import android.widget.Button
+import android.util.Log
 import android.widget.EditText
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.example.soulsync.adapter.chatbotAdapter
-import com.example.soulsync.database.entity.Chat
-import com.example.soulsync.databinding.ActivityChatBotBinding
 import com.example.soulsync.states.ChatStates
-import com.example.soulsync.viewmodels.ChatViewModel
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.FirebaseDatabase
+import org.json.JSONObject
+import com.example.soulsync.databinding.ActivityChatBotBinding
+import java.net.HttpURLConnection
+
+import java.net.URL
 
 class ChatBotActivity : AppCompatActivity() {
     private lateinit var binding: ActivityChatBotBinding
-    //private lateinit var chatRecyclerView: RecyclerView
-    //private lateinit var messagebox: EditText
     private lateinit var messageAdpater: chatbotAdapter
-    private lateinit var messageLst  : ArrayList<ChatStates>
+    private lateinit var messageLst: ArrayList<ChatStates>
 
-
-    //create unqiue room for sender and reciever
-
-    var recieverRoom : String? = null
-    var senderRoom   : String? = null
-
+    private val senderUid = FirebaseAuth.getInstance().currentUser?.uid
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,80 +29,64 @@ class ChatBotActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         val name = intent.getStringExtra("name")
-        val recieverUid = intent.getStringExtra("uid")
-
-        val senderUid = FirebaseAuth.getInstance().currentUser?.uid
-
-        senderRoom = recieverUid + senderUid
-        recieverRoom = senderUid + recieverUid
 
         messageLst = ArrayList()
         messageAdpater = chatbotAdapter(this, messageLst)
+        binding.chatbox.adapter = messageAdpater
 
-        //adding message to dataBase
+        // Send message button click listener
         binding.sntButton.setOnClickListener {
-            val messsage = binding.TextBox.text.toString()
-            val messageObject: String //complete this to pass all parameter of chat state
-
-
-            var chatViewmodel: ChatViewModel = ChatViewModel(
-                FirebaseDatabase.getInstance("https://soulsync-8c7b0-default-rtdb.asia-southeast1.firebasedatabase.app/")
-                    .reference
-            )
-
-            binding.TextBox.addTextChangedListener(
-                object : TextWatcher {
-                    override fun afterTextChanged(s: Editable?) {}
-                    override fun beforeTextChanged(
-                        s: CharSequence?,
-                        start: Int,
-                        count: Int,
-                        after: Int
-                    ) {
-                    }
-
-                    override fun onTextChanged(
-                        s: CharSequence?,
-                        start: Int,
-                        before: Int,
-                        count: Int
-                    ) {
-
-                    }
-                }
-            )
-
-
-
-            binding.prf.setOnClickListener {
-                val i = Intent(applicationContext, ChatBotActivity::class.java)
-                i.addFlags(android.content.Intent.FLAG_ACTIVITY_CLEAR_TOP)
-                i.addFlags(android.content.Intent.FLAG_ACTIVITY_CLEAR_TASK)
-                i.addFlags(android.content.Intent.FLAG_ACTIVITY_NEW_TASK)
-                i.putExtra("EXIT", true)
-                startActivity(i)
-                finish()
-
-            }
-            binding.feed.setOnClickListener {
-                val i = Intent(applicationContext, FeedActivity::class.java)
-                i.addFlags(android.content.Intent.FLAG_ACTIVITY_CLEAR_TOP)
-                i.addFlags(android.content.Intent.FLAG_ACTIVITY_CLEAR_TASK)
-                i.addFlags(android.content.Intent.FLAG_ACTIVITY_NEW_TASK)
-                i.putExtra("EXIT", true)
-                startActivity(i)
-                finish()
-            }
-            binding.msg.setOnClickListener {
-                val i = Intent(applicationContext, verifiedUserActivity::class.java)
-                i.addFlags(android.content.Intent.FLAG_ACTIVITY_CLEAR_TOP)
-                i.addFlags(android.content.Intent.FLAG_ACTIVITY_CLEAR_TASK)
-                i.addFlags(android.content.Intent.FLAG_ACTIVITY_NEW_TASK)
-                i.putExtra("EXIT", true)
-                startActivity(i)
-                finish()
-
+            val message = binding.TextBox.text.toString()
+            if (message.isNotEmpty()) {
+                sendMessageToAPI(message)
+                binding.TextBox.text.clear() // Clear message box after sending
+            } else {
+                Toast.makeText(this, "Please enter a message", Toast.LENGTH_SHORT).show()
             }
         }
 
-    }}
+        // Handle profile, feed, and messages button clicks
+        binding.prf.setOnClickListener {
+            // Handle profile button click (your implementation)
+        }
+        binding.feed.setOnClickListener {
+            // Handle feed button click (your implementation)
+        }
+        binding.msg.setOnClickListener {
+            // Handle messages button click (your implementation)
+        }
+    }
+
+    private fun sendMessageToAPI(message: String) {
+        val url = URL("http://127.0.0.1:8000/chat/")
+        val connection = url.openConnection() as HttpURLConnection
+        connection.doOutput = true
+        connection.setRequestProperty("Content-Type", "application/json")
+        connection.requestMethod = "POST"
+
+        val jsonParam = JSONObject().put("message", message)
+        val jsonString = jsonParam.toString()
+
+        try {
+            connection.outputStream.write(jsonString.toByteArray())
+            connection.outputStream.flush()
+
+            if (connection.responseCode == HttpURLConnection.HTTP_OK) {
+                val response = connection.inputStream.bufferedReader().use { it.readText() }
+                // Update chat view with response
+                val receivedMessage = JSONObject(response).getString("message")
+                messageLst.add(ChatStates(message,true)) // Add sent message
+                messageLst.add(ChatStates(receivedMessage, false)) // Add received message
+                messageAdpater.notifyDataSetChanged()
+            } else {
+                Log.e("ChatActivity", "Error sending message: ${connection.responseCode}")
+                Toast.makeText(this, "Error sending message", Toast.LENGTH_SHORT).show()
+            }
+        } catch (e: Exception) {
+            Log.e("ChatActivity", "Error sending message", e)
+            Toast.makeText(this, "Error sending message", Toast.LENGTH_SHORT).show()
+        } finally {
+            connection.disconnect()
+        }
+    }
+}

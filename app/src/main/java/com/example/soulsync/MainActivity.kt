@@ -43,53 +43,53 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         loginViewmodel = LoginViewmodel(auth)
 
-//        loginViewmodel.viewModelScope.launch (Dispatchers.Default){
-//            withContext(Dispatchers.Default){
-//                val readData = ReadData(FirebaseDatabase.getInstance("https://soulsync-8c7b0-default-rtdb.asia-southeast1.firebasedatabase.app/").reference)
-//                // Call getPosts and provide a callback function to handle the result
-//                readData.getPosts { posts ->
-//                    // Do something with the list of Post objects
-//                    for (post in posts) {
-//                        // Process each post
-//                        Log.i("TestPost",post.toString())
-//                    }
-//                }
-//                var writeData = WriteData(FirebaseDatabase.getInstance("https://soulsync-8c7b0-default-rtdb.asia-southeast1.firebasedatabase.app/").reference)
-//                writeData.writeNewUser("abcdefgh" , "pranav" ,"pranav@gmail.com")
-//                writeData.writeNewUser("abcdytre" , "harsh" ,"pranav@gmail.com",true)
-//                val postid1 = writeData.writeNewPost("abcdefgh" , "pranav" , "this is title " , "this is body")
-//                val postid2 = writeData.writeNewPost("abcdefgh" , "pranav" , "this is title " , "this is body")
-//                writeData.writeNewResponse(QResponse("well" , "good" , "very good") , "abcdefgh")
-//                val chatid = writeData.createChat(User("abcdefgh","pranav"),"abcdytre")
-//
-//                if (chatid != null) {
-//                    readData.getChatMessages(chatid) { chatMessages ->
-//                        // Do something with the list of Chat objects
-//                        for (chatMessage in chatMessages) {
-//                            // Process each chat message
-//                            Log.i("TestChat",chatMessage.toString())
-//                        }
-//                    }
-//                }
-//
-//                if (chatid != null) {
-//                    writeData.writeNewChat(Chat("abcdefgh","hey"),chatid)
-//                    writeData.writeNewChat(Chat("abcdytre","hello"),chatid)
-//                    writeData.writeNewChat(Chat("abcdefgh","helo"),chatid)
-//                }
-//
-//                if (postid1 != null) {
-//                    writeData.writeNewComment("abcdefgh" ,postid1 , "pranav" , "this is comment 1")
-//                }
-//                if (postid2 != null) {
-//                    writeData.writeNewComment("abcdytre" ,postid2 , "harsh" , "this is comment 2")
-//                }
-//                if (postid1 != null) {
-//                    writeData.writeNewComment("abcdefgh" ,postid1 , "pranav" , "this is comment 3")
-//                }
-//
-//            }
-//        }
+        loginViewmodel.viewModelScope.launch (Dispatchers.Default){
+            withContext(Dispatchers.Default){
+                val readData = ReadData(FirebaseDatabase.getInstance("https://soulsync-8c7b0-default-rtdb.asia-southeast1.firebasedatabase.app/").reference)
+                // Call getPosts and provide a callback function to handle the result
+                readData.getPosts { posts ->
+                    // Do something with the list of Post objects
+                    for (post in posts) {
+                        // Process each post
+                        Log.i("TestPost",post.toString())
+                    }
+                }
+                var writeData = WriteData(FirebaseDatabase.getInstance("https://soulsync-8c7b0-default-rtdb.asia-southeast1.firebasedatabase.app/").reference)
+                writeData.writeNewUser("abcdefgh" , "pranav" ,"pranav@gmail.com")
+                writeData.writeNewUser("abcdytre" , "harsh" ,"pranav@gmail.com",true)
+                val postid1 = writeData.writeNewPost("abcdefgh" , "pranav" , "this is title " , "this is body")
+                val postid2 = writeData.writeNewPost("abcdefgh" , "pranav" , "this is title " , "this is body")
+                writeData.writeNewResponse(QResponse("well" , "good" , "very good") , "abcdefgh")
+                val chatid = writeData.createChat(User("abcdefgh","pranav"),"abcdytre")
+
+                if (chatid != null) {
+                    readData.getChatMessages(chatid) { chatMessages ->
+                        // Do something with the list of Chat objects
+                        for (chatMessage in chatMessages) {
+                            // Process each chat message
+                            Log.i("TestChat",chatMessage.toString())
+                        }
+                    }
+                }
+
+                if (chatid != null) {
+                    writeData.writeNewChat(Chat("abcdefgh","hey"),chatid)
+                    writeData.writeNewChat(Chat("abcdytre","hello"),chatid)
+                    writeData.writeNewChat(Chat("abcdefgh","helo"),chatid)
+                }
+
+                if (postid1 != null) {
+                    writeData.writeNewComment("abcdefgh" ,postid1 , "pranav" , "this is comment 1")
+                }
+                if (postid2 != null) {
+                    writeData.writeNewComment("abcdytre" ,postid2 , "harsh" , "this is comment 2")
+                }
+                if (postid1 != null) {
+                    writeData.writeNewComment("abcdefgh" ,postid1 , "pranav" , "this is comment 3")
+                }
+
+            }
+        }
 
         binding.userName2.addTextChangedListener(
             object : TextWatcher {
