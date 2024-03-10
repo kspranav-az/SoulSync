@@ -15,8 +15,8 @@ private val Tag = "UserAdapter"
 
 class chatbotAdapter(val c: Context, val messageLst : ArrayList<ChatStates>) :RecyclerView.Adapter<RecyclerView.ViewHolder>(){
 
-    val ITEM_RECIEVE = 1;
-    val ITEM_SENT = 1;
+    val ITEM_RECIEVE = 1
+    val ITEM_SENT = 1
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         if(viewType == 1) {
             val view: View = LayoutInflater.from(c).inflate(R.layout.recyler_chat_view2, parent, false)

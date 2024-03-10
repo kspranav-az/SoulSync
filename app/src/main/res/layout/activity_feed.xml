@@ -12,74 +12,42 @@
         android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"><![CDATA[
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
 
 
-        androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/toolbar2"
-            android:layout_width="417dp"
-            android:layout_height="80dp"
-            android:background="@color/blue"
-            android:minHeight="?attr/actionBarSize"
-            android:theme="?attr/actionBarTheme"
-            app:layout_constraintBottom_toTopOf="@+id/feedRecycler"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.916"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-
-        ]]>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/feedRecycler"
+            android:layout_width="441dp"
+            android:layout_height="879dp"
+            tools:layout_editor_absoluteX="-4dp"
+            tools:layout_editor_absoluteY="80dp" />
 
         <Button
             android:id="@+id/prf"
             android:layout_width="53dp"
             android:layout_height="39dp"
-            android:layout_marginStart="36dp"
-            android:layout_marginTop="28dp"
-            android:layout_marginEnd="304dp"
             android:background="@drawable/baseline_person_24"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <Button
-            android:id="@+id/feed"
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:layout_marginStart="28dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="40dp"
-            android:layout_marginBottom="21dp"
-            android:background="@drawable/baseline_feed_24"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/msg"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.024" />
+            tools:layout_editor_absoluteX="32dp"
+            tools:layout_editor_absoluteY="17dp" />
 
         <Button
             android:id="@+id/msg"
             android:layout_width="34dp"
             android:layout_height="39dp"
-            android:layout_marginStart="188dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="16dp"
             android:background="@drawable/baseline_message_24"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.03" />
+            tools:layout_editor_absoluteX="186dp"
+            tools:layout_editor_absoluteY="17dp" />
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/feedRecycler"
-            android:layout_width="331dp"
-            android:layout_height="597dp"
-            tools:layout_editor_absoluteX="32dp"
-            tools:layout_editor_absoluteY="101dp" />
+        <Button
+            android:id="@+id/feed"
+            android:layout_width="43dp"
+            android:layout_height="43dp"
+            android:background="@drawable/baseline_feed_24"
+            tools:layout_editor_absoluteX="337dp"
+            tools:layout_editor_absoluteY="13dp" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

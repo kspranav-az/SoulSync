@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#D2BAA8">
+    android:background="#D2BAA8"
+    tools:context=".ChatActivity">
 
     <Button
         android:id="@+id/prf"
@@ -20,9 +21,9 @@
         android:layout_height="36dp"
         android:background="@drawable/baseline_message_24"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.448"
+        app:layout_constraintHorizontal_bias="0.464"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="25dp" />
+        tools:layout_editor_absoluteY="22dp" />
 
 
     <Button
@@ -30,18 +31,17 @@
         android:layout_width="43dp"
         android:layout_height="43dp"
         android:background="@drawable/baseline_feed_24"
-        tools:layout_editor_absoluteX="330dp"
-        tools:layout_editor_absoluteY="25dp" />
+        tools:layout_editor_absoluteX="322dp"
+        tools:layout_editor_absoluteY="22dp" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/chatbox"
-        android:layout_width="381dp"
-        android:layout_height="652dp"
-        android:layout_marginBottom="68dp"
+        android:layout_width="388dp"
+        android:layout_height="671dp"
+        android:layout_marginBottom="48dp"
         android:background="#D2BAA8"
         app:layout_constraintBottom_toTopOf="@+id/constraintLayout2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.625"
         app:layout_constraintStart_toStartOf="parent"
         tools:listitem="@layout/recyler_chat_view" />
 
@@ -49,11 +49,11 @@
         android:id="@+id/constraintLayout2"
         android:layout_width="405dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="52dp"
         android:background="#D2BAA8"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.592"
+        app:layout_constraintHorizontal_bias="0.407"
         app:layout_constraintStart_toStartOf="parent">
 
         <EditText
@@ -83,4 +83,5 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

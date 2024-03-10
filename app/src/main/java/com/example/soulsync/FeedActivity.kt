@@ -30,7 +30,7 @@ class FeedActivity : AppCompatActivity() {
 //            startActivity(i)
 //            finish()
 //        }
-        binding.bot.setOnClickListener {
+        binding.prf.setOnClickListener {
             val i = Intent(applicationContext, ChatBotActivity::class.java)
             i.addFlags(android.content.Intent.FLAG_ACTIVITY_CLEAR_TOP)
             i.addFlags(android.content.Intent.FLAG_ACTIVITY_CLEAR_TASK)

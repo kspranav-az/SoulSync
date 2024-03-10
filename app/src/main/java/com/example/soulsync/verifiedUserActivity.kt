@@ -22,12 +22,10 @@ class verifiedUserActivity: AppCompatActivity() {
 
         }
 
-        binding.myButton1.setOnClickListener {
+        binding.proceed.setOnClickListener {
             startActivity(Intent(applicationContext,ChatBotActivity::class.java))
         }
-        binding.simpleTextView.setOnClickListener {
-            startActivity(Intent(applicationContext,FeedActivity::class.java))
-        }
+
 
     }
 }

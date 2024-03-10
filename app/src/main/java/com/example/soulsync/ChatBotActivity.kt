@@ -3,18 +3,23 @@ package com.example.soulsync
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.widget.Button
 import android.widget.EditText
 import androidx.recyclerview.widget.RecyclerView
 import com.example.soulsync.adapter.chatbotAdapter
+import com.example.soulsync.database.entity.Chat
 import com.example.soulsync.databinding.ActivityChatBotBinding
 import com.example.soulsync.states.ChatStates
+import com.example.soulsync.viewmodels.ChatViewModel
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.FirebaseDatabase
 
 class ChatBotActivity : AppCompatActivity() {
     private lateinit var binding: ActivityChatBotBinding
-    private lateinit var chatRecyclerView: RecyclerView
+    //private lateinit var chatRecyclerView: RecyclerView
     private lateinit var messagebox: EditText
-    private lateinit var sntbtn: Button
     private lateinit var messageAdpater: chatbotAdapter
     private lateinit var messageLst  : ArrayList<ChatStates>
 
@@ -30,7 +35,7 @@ class ChatBotActivity : AppCompatActivity() {
         setContentView(R.layout.activity_chat_bot)
         binding = ActivityChatBotBinding.inflate(layoutInflater)
         setContentView(binding.root)
-/*
+
         val name = intent.getStringExtra("name")
         val recieverUid = intent.getStringExtra("uid")
 
@@ -43,7 +48,7 @@ class ChatBotActivity : AppCompatActivity() {
         messageAdpater = chatbotAdapter(this, messageLst)
 
         //adding message to dataBase
-        sntbtn.setOnClickListener {
+        binding.sntButton.setOnClickListener {
             val messsage = messagebox.text.toString()
             val messageObject: String //complete this to pass all parameter of chat state
 
@@ -75,7 +80,7 @@ class ChatBotActivity : AppCompatActivity() {
                 }
             )
 
-     */
+
 
             binding.bot.setOnClickListener {
                 val i = Intent(applicationContext, ChatBotActivity::class.java)
@@ -107,4 +112,5 @@ class ChatBotActivity : AppCompatActivity() {
 
             }
         }
-    }
+
+    }}

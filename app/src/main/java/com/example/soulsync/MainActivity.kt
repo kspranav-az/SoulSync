@@ -118,7 +118,7 @@ class MainActivity : AppCompatActivity() {
 
         }
 
-        binding.signup.setOnClickListener {
+        binding.loginForgetPassword.setOnClickListener {
             val i =  Intent(applicationContext, RegisterActivity::class.java)
             i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
             i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)

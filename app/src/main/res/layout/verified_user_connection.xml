@@ -37,7 +37,7 @@ Connecting You with Verified Advisors...
         app:layout_constraintVertical_bias="0.117" />
 
     <Button
-        android:id="@+id/myButton1"
+        android:id="@+id/proceed"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/main_button"

@@ -100,21 +100,12 @@
             tools:layout_editor_absoluteY="22dp" />
 
         <Button
-            android:id="@+id/bot"
-            android:layout_width="40dp"
-            android:layout_height="45dp"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/baseline_android_24"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:layout_editor_absoluteX="140dp" />
-
-        <Button
             android:id="@+id/msg"
             android:layout_width="42dp"
             android:layout_height="36dp"
             android:background="@drawable/baseline_message_24"
-            tools:layout_editor_absoluteX="240dp"
-            tools:layout_editor_absoluteY="25dp" />
+            tools:layout_editor_absoluteX="185dp"
+            tools:layout_editor_absoluteY="22dp" />
 
         <Button
             android:id="@+id/feed"

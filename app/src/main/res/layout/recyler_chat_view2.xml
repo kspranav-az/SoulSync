@@ -21,8 +21,8 @@
             android:id="@+id/tbx2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:textAlignment="center"
-            android:text="message is seen here" />
+            android:text="message is seen here"
+            android:textAlignment="center" />
 
 
     </LinearLayout>
