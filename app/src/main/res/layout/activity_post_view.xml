@@ -25,7 +25,7 @@
         android:id="@+id/button"
         android:layout_width="121dp"
         android:layout_height="64dp"
-        android:text="Button"
+        android:text="Post"
         android:background="@drawable/bluebutton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"

@@ -8,5 +8,7 @@ data class User(
     var uid: String = "",
     var username: String? = "",
     var email: String? = "",
-    var verification: Boolean = false
+    var verification: Boolean = false,
+    var isactive : Boolean = true,
+    var connected : Boolean = false,
 ) : Parcelable

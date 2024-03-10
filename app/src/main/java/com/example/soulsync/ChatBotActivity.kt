@@ -19,7 +19,7 @@ import com.google.firebase.database.FirebaseDatabase
 class ChatBotActivity : AppCompatActivity() {
     private lateinit var binding: ActivityChatBotBinding
     //private lateinit var chatRecyclerView: RecyclerView
-    private lateinit var messagebox: EditText
+    //private lateinit var messagebox: EditText
     private lateinit var messageAdpater: chatbotAdapter
     private lateinit var messageLst  : ArrayList<ChatStates>
 
@@ -49,7 +49,7 @@ class ChatBotActivity : AppCompatActivity() {
 
         //adding message to dataBase
         binding.sntButton.setOnClickListener {
-            val messsage = messagebox.text.toString()
+            val messsage = binding.TextBox.text.toString()
             val messageObject: String //complete this to pass all parameter of chat state
 
 
@@ -82,7 +82,7 @@ class ChatBotActivity : AppCompatActivity() {
 
 
 
-            binding.bot.setOnClickListener {
+            binding.prf.setOnClickListener {
                 val i = Intent(applicationContext, ChatBotActivity::class.java)
                 i.addFlags(android.content.Intent.FLAG_ACTIVITY_CLEAR_TOP)
                 i.addFlags(android.content.Intent.FLAG_ACTIVITY_CLEAR_TASK)
