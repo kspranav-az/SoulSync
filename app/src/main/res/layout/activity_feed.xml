@@ -15,15 +15,18 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintVertical_bias="0.0">
 
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/feedRecycler"
-            android:layout_width="441dp"
-            android:layout_height="879dp"
-            tools:layout_editor_absoluteX="-4dp"
-            tools:layout_editor_absoluteY="80dp" />
+            android:layout_width="305dp"
+            android:layout_height="573dp"
+            android:layout_marginTop="100dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.297"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/prf"
@@ -38,16 +41,33 @@
             android:layout_width="34dp"
             android:layout_height="39dp"
             android:background="@drawable/baseline_message_24"
-            tools:layout_editor_absoluteX="186dp"
-            tools:layout_editor_absoluteY="17dp" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="21dp" />
 
         <Button
             android:id="@+id/feed"
             android:layout_width="43dp"
             android:layout_height="43dp"
             android:background="@drawable/baseline_feed_24"
-            tools:layout_editor_absoluteX="337dp"
-            tools:layout_editor_absoluteY="13dp" />
+            tools:layout_editor_absoluteX="284dp"
+            tools:layout_editor_absoluteY="17dp" />
+
+        <ImageButton
+            android:id="@+id/addPost"
+            android:Height="52dp"
+            android:Width="80dp"
+            android:layout_width="80dp"
+            android:layout_height="52dp"
+            android:layout_marginTop="27dp"
+            android:layout_marginBottom="29dp"
+            android:background=""
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/feedRecycler"
+            app:layout_constraintVertical_bias="0.619"
+            app:srcCompat="@android:drawable/ic_input_add" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
